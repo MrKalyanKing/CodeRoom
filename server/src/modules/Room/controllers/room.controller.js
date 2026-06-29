@@ -1,5 +1,5 @@
 import { createRoomService, getRoomInfoService, updateRoomService } from '../services/room.service.js';
-import { initRoom } from '../../../syncEngine.js';
+import { initRoom } from '../../../SynEngine.js';
 
 export const createRoom = async (req, res) => {
   try {

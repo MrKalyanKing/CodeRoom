@@ -1,5 +1,5 @@
 import { authenticateRoom, joinRoomService } from '../services/auth.service.js';
-import { initRoom } from '../../../syncEngine.js';
+import { initRoom } from '../../../SynEngine.js';
 
 export const verifyRoomPassword = async (req, res) => {
   try {
