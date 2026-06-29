@@ -1,4 +1,4 @@
-import { createRoomService, getRoomInfoService, updateRoomService } from '../services/room.service.js';
+import { createRoomService, getRoomInfoService, updateRoomService, authRoomService, joinRoomService } from '../services/room.service.js';
 import { initRoom } from '../../../SynEngine.js';
 
 export const createRoom = async (req, res) => {
@@ -44,6 +44,41 @@ export const getRoomInfo = async (req, res) => {
   } catch (err) {
     console.error('GET /api/rooms/:code error:', err);
     res.status(500).json({ error: 'Failed to fetch room info' });
+  }
+};
+
+export const authRoom = async (req, res) => {
+  try {
+    const code = req.params.code.toUpperCase();
+    const { password } = req.body;
+
+    const result = await authRoomService(code, password);
+    if (result.error) {
+      return res.status(result.status).json({ error: result.error });
+    }
+
+    res.json({ roomToken: result.roomToken });
+  } catch (err) {
+    console.error('POST /api/rooms/:code/auth error:', err);
+    res.status(500).json({ error: 'Failed to authenticate' });
+  }
+};
+
+export const joinRoom = async (req, res) => {
+  try {
+    const code = req.params.code.toUpperCase();
+    const { roomToken } = req.body;
+
+    const result = await joinRoomService(code, roomToken);
+    if (result.error) {
+      return res.status(result.status).json({ error: result.error });
+    }
+
+    const room = result.data;
+    res.json({ code: room.code, name: room.name });
+  } catch (err) {
+    console.error('POST /api/rooms/:code/join error:', err);
+    res.status(500).json({ error: 'Failed to join room' });
   }
 };
 

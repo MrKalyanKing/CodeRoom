@@ -117,4 +117,4 @@ function getContent(code) {
 function removeRoom(code) {
     rooms.delete(code);
 }
-module.exports = { initRoom, receiveOp, getContent, getRoom, removeRoom };
+export { initRoom, receiveOp, getContent, getRoom, removeRoom };

@@ -6,9 +6,9 @@
  * Format: participantsByRoom = Map<roomCode, Map<socketId, { handle, isHost }>>
  */
 
-const jwt = require('jsonwebtoken');
-const { receiveOp, initRoom, getContent } = require('./syncEngine');
-const Room = require('./models/Room');
+import jwt from 'jsonwebtoken';
+import { receiveOp, initRoom, getContent } from './SynEngine.js';
+import Room from './modules/Room/models/Room.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'changeme-set-JWT_SECRET-in-env';
 
@@ -176,4 +176,4 @@ function registerSocket(io, socket) {
     });
 }
 
-module.exports = { registerSocket };
+export { registerSocket };
