@@ -1,26 +1,13 @@
 
-import mongoose from "mongoose"
-import dotenv from "dotenv"
-dotenv.config()
-// Function to connect to MongoDB using Promise
-function connectDB() {
-  return new Promise((resolve, reject) => {
-    const dbURL = process.env.MONGODB_URI; 
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-    if (!dbURL) {
-      return reject(new Error("DB_URL is not defined in environment variables"));
-    }
+dotenv.config();
 
-    mongoose.connect(dbURL)
-      .then(() => {
-        console.log(" Database connected successfully");
-        resolve();
-      })
-      .catch((err) => {
-        console.error(" Database connection failed:", err.message);
-        reject(err);
-      });
-  });
+export default async function connectDB() {
+  const dbURL = process.env.MONGODB_URI;
+  if (!dbURL) throw new Error('MONGODB_URI is not defined in environment variables');
+
+  await mongoose.connect(dbURL);
+  console.log('Database connected successfully');
 }
-
-export default connectDB
