@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { api } from '../../lib/api';
 import { PasswordStep } from './components/PasswordStep';
-import { RoomForm } from './components/RoomForm';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import RoomCard from "./components/RoomCard";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
 
 export default function LandingPage({ onEnterRoom }) {
     const [tab, setTab] = useState('join'); // 'join' | 'create'
@@ -121,7 +125,12 @@ export default function LandingPage({ onEnterRoom }) {
     }
 
     return (
-        <RoomForm 
+       <main className="relative min-h-screen bg-[#050608] text-white overflow-hidden">
+
+    <Navbar />
+
+    <Hero>
+        <RoomCard
             tab={tab}
             switchTab={switchTab}
             handle={handle}
@@ -137,5 +146,12 @@ export default function LandingPage({ onEnterRoom }) {
             error={error}
             loading={loading}
         />
-    );
+    </Hero>
+
+    <Features />
+
+    <Footer />
+
+</main>
+    )
 }
