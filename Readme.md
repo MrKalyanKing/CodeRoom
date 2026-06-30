@@ -24,13 +24,12 @@ CodeRoom is a high-performance, real-time collaborative coding platform. It allo
 - **Tailwind CSS v4** - Utility-first styling with modern dark-mode glassmorphic aesthetics
 - **Socket.IO Client** - WebSocket client for real-time synchronization
 - **Lucide React** - SVG Icon library
-- **Framer Motion** - (Installed) Animation library
+
 
 ### Backend
 - **Node.js & Express 5** - Server framework and REST API
 - **Socket.IO** - WebSocket server for operational transforms and presence
 - **MongoDB & Mongoose** - NoSQL database and ODM for persisting rooms and history
-- **JSON Web Tokens (JWT)** - Stateless authentication and room access management
 - **Bcrypt.js** - Password hashing for secure rooms
 
 ---
