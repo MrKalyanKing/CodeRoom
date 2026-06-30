@@ -137,6 +137,7 @@
 
 
 export function RoomForm({
+    onViewHistory,
     tab,
     switchTab,
     handle,
@@ -319,6 +320,16 @@ export function RoomForm({
                             : "Join Room"}
                     </button>
                 </form>
+                
+                <div className="p-4 border-t border-[#30363d] text-center bg-[#0d1117]/50">
+                    <button 
+                        type="button"
+                        onClick={onViewHistory}
+                        className="text-[#58a6ff] hover:text-white transition-colors text-sm font-medium"
+                    >
+                        View Code Conversation History
+                    </button>
+                </div>
             </div>
         </div>
     );

@@ -31,7 +31,7 @@ function formatRelative(ms) {
     return `${hours}h ago`;
 }
 
-export default function EditorRoom({ session, onLeave }) {
+export default function EditorRoom({ session, onLeave, onViewHistory }) {
     const { code, handle, hostToken, isHost, roomToken, isPasswordProtected } = session;
     const [roomName, setRoomName] = useState(session.roomName);
 
@@ -204,7 +204,10 @@ export default function EditorRoom({ session, onLeave }) {
                     <span className="text-gray-500 cursor-default" title="Coming soon">
                         Rooms
                     </span>
-                    <span className="text-gray-500 cursor-default" title="Coming soon">
+                    <span 
+                        className="text-gray-500 cursor-pointer hover:text-white transition-colors" 
+                        onClick={onViewHistory}
+                    >
                         History
                     </span>
                     <span className="text-gray-500 cursor-default" title="Coming soon">

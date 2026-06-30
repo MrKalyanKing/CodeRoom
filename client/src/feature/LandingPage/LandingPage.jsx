@@ -3,7 +3,7 @@ import { api } from '../../lib/api';
 import { PasswordStep } from './components/PasswordStep';
 import { RoomForm } from './components/RoomForm';
 
-export default function LandingPage({ onEnterRoom }) {
+export default function LandingPage({ onEnterRoom, onViewHistory }) {
     const [tab, setTab] = useState('join'); // 'join' | 'create'
     const [handle, setHandle] = useState('');
     const [roomName, setRoomName] = useState('');
@@ -122,6 +122,7 @@ export default function LandingPage({ onEnterRoom }) {
 
     return (
         <RoomForm 
+            onViewHistory={onViewHistory}
             tab={tab}
             switchTab={switchTab}
             handle={handle}

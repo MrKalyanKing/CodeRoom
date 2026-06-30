@@ -42,4 +42,10 @@ export const api = {
       method: 'PATCH',
       body: JSON.stringify({ hostToken, ...updates }),
     }),
+
+  // Get history rooms
+  getHistoryRooms: () => request('/api/history'),
+
+  // Get history by room code
+  getHistoryByRoom: (code) => request(`/api/history/${code}`),
 };
