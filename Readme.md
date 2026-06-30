@@ -138,7 +138,7 @@ To run the project, create `.env` files in both `client` and `server` directorie
 
 **Backend (`server/.env`)**
 ```env
-PORT=5000
+PORT=4600
 MONGODB_URI=mongodb://localhost:27017/coderoom
 JWT_SECRET=your_super_secret_jwt_key
 CLIENT_URL=http://localhost:5173
