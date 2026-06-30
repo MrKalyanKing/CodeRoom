@@ -125,6 +125,7 @@ export default function RoomCard({
                                         setRoomName(e.target.value)
                                     }
                                     className={inputClass}
+                                    autoComplete="off"
                                 />
 
                             </div>
@@ -154,6 +155,7 @@ export default function RoomCard({
                                         setRoomPassword(e.target.value)
                                     }
                                     className={inputClass}
+                                    autoComplete="new-password"
                                 />
 
                             </div>
@@ -188,6 +190,7 @@ export default function RoomCard({
                                     setCode(e.target.value.toUpperCase())
                                 }
                                 className={inputClass}
+                                autoComplete="off"
                             />
 
                         </div>
