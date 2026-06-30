@@ -62,15 +62,15 @@ export default function HistoryPage({ onBack }) {
                     >
                         Editor
                     </span>
-                    <span className="text-gray-500 cursor-default" title="Coming soon">
+                    {/* <span className="text-gray-500 cursor-default" title="Coming soon">
                         Rooms
-                    </span>
+                    </span> */}
                     <span className="text-[#00dbe9] font-medium border-b-2 border-[#00dbe9] pb-5 -mb-5 cursor-default">
                         History
                     </span>
-                    <span className="text-gray-500 cursor-default" title="Coming soon">
+                    {/* <span className="text-gray-500 cursor-default" title="Coming soon">
                         Settings
-                    </span>
+                    </span> */}
                 </nav>
 
                 <div className="w-9 h-9 rounded-full border border-[#1c232c] flex items-center justify-center text-gray-400 flex-shrink-0">
