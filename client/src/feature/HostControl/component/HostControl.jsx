@@ -51,13 +51,13 @@ export default function HostControls({ code, hostToken, isPasswordProtected: ini
     }
 
     const ghostBtnClass =
-        'w-full text-left text-sm text-gray-300 border border-[#30363d] rounded px-3 py-2 hover:border-gray-500 hover:text-white transition-colors';
+        'w-full text-left text-sm text-gray-300 border border-[#1c232c] rounded px-3 py-2 hover:border-gray-500 hover:text-white transition-colors';
     const inputClass =
-        'w-full bg-[#0d1117] border border-[#30363d] rounded px-3 py-1.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#58a6ff] text-sm transition-colors';
+        'w-full bg-[#05080c] border border-[#1c232c] rounded px-3 py-1.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#00dbe9] text-sm transition-colors';
 
     return (
-        <div className="px-4 py-3 border-b border-[#30363d]">
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Host Controls</h3>
+        <div className="px-4 py-2">
+            <h3 className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-2">Host Controls</h3>
 
             {/* ── Rename ── */}
             {!renaming ? (
@@ -78,13 +78,13 @@ export default function HostControls({ code, hostToken, isPasswordProtected: ini
                     <div className="flex gap-2">
                         <button
                             type="submit"
-                            className="flex-1 bg-[#1f6feb] text-white rounded px-2 py-1 text-xs font-medium hover:bg-[#388bfd] transition-colors"
+                            className="flex-1 bg-[#00dbe9] text-[#04181c] rounded px-2 py-1 text-xs font-bold hover:bg-[#33e4ef] transition-colors"
                         >
                             Save
                         </button>
                         <button
                             type="button"
-                            className="flex-1 border border-[#30363d] text-gray-400 rounded px-2 py-1 text-xs hover:text-white hover:border-gray-500 transition-colors"
+                            className="flex-1 border border-[#1c232c] text-gray-400 rounded px-2 py-1 text-xs hover:text-white hover:border-gray-500 transition-colors"
                             onClick={() => { setRenaming(false); setRenameError(''); }}
                         >
                             Cancel
@@ -103,7 +103,7 @@ export default function HostControls({ code, hostToken, isPasswordProtected: ini
                                 Change Password
                             </button>
                             <button
-                                className="w-full text-left text-sm text-red-400 border border-[#30363d] rounded px-3 py-2 hover:border-red-700 hover:text-red-300 transition-colors"
+                                className="w-full text-left text-sm text-red-400 border border-[#1c232c] rounded px-3 py-2 hover:border-red-700 hover:text-red-300 transition-colors"
                                 onClick={() => setPwSection('remove')}
                             >
                                 Remove Password
@@ -133,14 +133,14 @@ export default function HostControls({ code, hostToken, isPasswordProtected: ini
                     <div className="flex gap-2">
                         <button
                             type="submit"
-                            className="flex-1 bg-[#1f6feb] text-white rounded px-2 py-1 text-xs font-medium hover:bg-[#388bfd] transition-colors disabled:opacity-50"
+                            className="flex-1 bg-[#00dbe9] text-[#04181c] rounded px-2 py-1 text-xs font-bold hover:bg-[#33e4ef] transition-colors disabled:opacity-50"
                             disabled={pwLoading}
                         >
                             {pwLoading ? '…' : pwSection === 'remove' ? 'Confirm' : 'Save'}
                         </button>
                         <button
                             type="button"
-                            className="flex-1 border border-[#30363d] text-gray-400 rounded px-2 py-1 text-xs hover:text-white hover:border-gray-500 transition-colors"
+                            className="flex-1 border border-[#1c232c] text-gray-400 rounded px-2 py-1 text-xs hover:text-white hover:border-gray-500 transition-colors"
                             onClick={() => { setPwSection(null); setNewPassword(''); setPwError(''); }}
                         >
                             Cancel
