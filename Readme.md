@@ -3,7 +3,6 @@
 CodeRoom is a high-performance, real-time collaborative coding platform. It allows multiple developers to join a shared workspace, edit code simultaneously with operational transformation-based synchronization, and manage room settings dynamically. The project features a modern, premium UI and a robust WebSocket-driven backend.
 
 ---
-
 ## 🚀 Implemented Business Modules
 
 - ✔ **Room Management** (Create, Join, Access Control)
