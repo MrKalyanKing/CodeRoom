@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { api } from '../../lib/api';
 
+import { LogoIcon, UserIcon } from '../../../components/Icons';
+
 export default function HistoryPage({ onBack }) {
     const [rooms, setRooms] = useState([]);
     const [selectedRoom, setSelectedRoom] = useState('');
@@ -43,18 +45,45 @@ export default function HistoryPage({ onBack }) {
     }
 
     return (
-        <div className="min-h-screen bg-slate-900 text-white flex flex-col font-sans p-6">
-            <div className="w-full max-w-7xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col h-[90vh]">
+        <div className="flex flex-col h-screen bg-[#05080c] overflow-hidden">
+            {/* ── Top nav ──────────────────────────────────────────────────── */}
+            <header className="h-16 flex-shrink-0 bg-[#070a0f] border-b border-[#1c232c] flex items-center px-6 gap-8">
+                <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-[#00dbe9]/10 border border-[#00dbe9]/40 flex items-center justify-center text-[#00dbe9]">
+                        <LogoIcon />
+                    </div>
+                    <span className="text-[#00dbe9] font-bold text-lg tracking-tight">CodeRoom</span>
+                </div>
+
+                <nav className="hidden sm:flex items-center gap-7 flex-1 justify-center text-sm">
+                    <span 
+                        className="text-gray-500 cursor-pointer hover:text-white transition" 
+                        onClick={onBack}
+                    >
+                        Editor
+                    </span>
+                    <span className="text-gray-500 cursor-default" title="Coming soon">
+                        Rooms
+                    </span>
+                    <span className="text-[#00dbe9] font-medium border-b-2 border-[#00dbe9] pb-5 -mb-5 cursor-default">
+                        History
+                    </span>
+                    <span className="text-gray-500 cursor-default" title="Coming soon">
+                        Settings
+                    </span>
+                </nav>
+
+                <div className="w-9 h-9 rounded-full border border-[#1c232c] flex items-center justify-center text-gray-400 flex-shrink-0">
+                    <UserIcon />
+                </div>
+            </header>
+
+            <div className="flex-1 flex flex-col p-6 overflow-y-auto">
+                <div className="w-full max-w-7xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col h-full min-h-[600px]">
                 <div className="flex justify-between items-center mb-6">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                         Code Conversation History
                     </h1>
-                    <button
-                        onClick={onBack}
-                        className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors border border-white/5"
-                    >
-                        Back to Home
-                    </button>
                 </div>
 
                 {error && (
