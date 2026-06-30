@@ -1,5 +1,5 @@
 import Avatar from '../../../components/Avatar';
-import { EyeIcon, PencilIcon } from '../../../components/Icons';
+import { Eye as EyeIcon, Pencil as PencilIcon } from 'lucide-react';
 
 export default function ParticipantList({ participants, currentSocketId, isHost, onKick }) {
     return (

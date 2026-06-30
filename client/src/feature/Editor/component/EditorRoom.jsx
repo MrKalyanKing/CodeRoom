@@ -5,17 +5,17 @@ import ParticipantList from '../../Participants/Components/ParticipantList';
 import HostControls from '../../HostControl/component/HostControl';
 import CodeEditor from './CodeEditor';
 import {
-    LogoIcon,
-    PlayIcon,
-    DotsIcon,
-    ExitIcon,
-    CodeFileIcon,
-    ClockIcon,
-    UserIcon,
-    CopyIcon,
-    NodeIcon,
-    TerminalIcon,
-} from '../../../components/Icons';
+    Code2 as LogoIcon,
+    Play as PlayIcon,
+    MoreHorizontal as DotsIcon,
+    LogOut as ExitIcon,
+    FileCode as CodeFileIcon,
+    Clock as ClockIcon,
+    User as UserIcon,
+    Copy as CopyIcon,
+    Network as NodeIcon,
+    TerminalSquare as TerminalIcon,
+} from 'lucide-react';
 
 const TYPING_THROTTLE_MS = 400;
 const TYPING_CLEAR_MS = 1200;

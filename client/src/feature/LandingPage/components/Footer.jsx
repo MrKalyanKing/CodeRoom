@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "../../../components/Icons";
+import { Github as GithubIcon, Linkedin as LinkedinIcon, Twitter as TwitterIcon } from 'lucide-react';
 
 export default function Footer() {
     return (
