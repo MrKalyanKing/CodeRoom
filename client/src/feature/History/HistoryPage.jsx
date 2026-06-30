@@ -161,6 +161,7 @@ export default function HistoryPage({ onBack }) {
                     </div>
                 </div>
             </div>
+            </div>
             <style>{`
                 .custom-scrollbar::-webkit-scrollbar {
                     width: 6px;
