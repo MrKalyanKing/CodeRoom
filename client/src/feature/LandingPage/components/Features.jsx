@@ -27,23 +27,23 @@ export default function Features() {
                         <div className="rounded-3xl border border-white/10 bg-[#0a0a0d] overflow-hidden shadow-2xl">
 
                             <img
-                                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&q=80"
+                                src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D"
                                 alt="Editor"
                                 className="w-full h-[330px] object-cover"
                             />
 
                             <div className="absolute bottom-8 left-8">
 
-                                <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs uppercase tracking-widest">
+                                <span className="px-3 py-1  rounded-full bg-cyan-500/20 text-cyan-900 text-xs uppercase tracking-widest">
                                     Live Session
                                 </span>
 
-                                <h3 className="mt-3 text-2xl font-semibold">
-                                    Alpha Project Core
+                                <h3 className="mt-3 text-2xl text-black font-semibold">
+                                    Collaborative Code Session
                                 </h3>
 
-                                <p className="text-gray-400 mt-1">
-                                    Refactoring the renderer for version 2.4
+                                <p className="text-black mt-1">
+                                    Building the next generation of web applications
                                 </p>
 
                             </div>
@@ -101,11 +101,11 @@ export default function Features() {
                                 <div>
 
                                     <h4 className="font-semibold">
-                                        VS Code Sync
+                                        Instant Sharing
                                     </h4>
 
                                     <p className="text-gray-500 text-sm">
-                                        Direct plugin support
+                                        Generate secure room codes
                                     </p>
 
                                 </div>
@@ -123,11 +123,11 @@ export default function Features() {
                                 <div>
 
                                     <h4 className="font-semibold">
-                                        HD Voice / Video
+                                        Code History
                                     </h4>
 
                                     <p className="text-gray-500 text-sm">
-                                        Integrated communication
+                                        Time-travel through code changes
                                     </p>
 
                                 </div>
@@ -153,12 +153,11 @@ export default function Features() {
                         </div>
 
                         <h3 className="text-2xl font-semibold">
-                            Liquid Latency
+                            Real-time Collaboration
                         </h3>
 
                         <p className="text-gray-400 mt-4 leading-7">
-                            Under 15ms global synchronization powered by our
-                            liquid-state engine.
+                            Experience zero-lag code synchronization. See your teammates' cursors and edits as they type.
                         </p>
 
                     </div>
@@ -172,12 +171,11 @@ export default function Features() {
                         </div>
 
                         <h3 className="text-2xl font-semibold">
-                            Obsidian Security
+                            Secure Rooms
                         </h3>
 
                         <p className="text-gray-400 mt-4 leading-7">
-                            Military-grade encryption keeps every room safe
-                            and completely private.
+                            Protect your collaborative sessions with room passwords and explicit host controls.
                         </p>
 
                     </div>
@@ -191,12 +189,11 @@ export default function Features() {
                         </div>
 
                         <h3 className="text-2xl font-semibold">
-                            Infinite Canvas
+                            Code Snapshots
                         </h3>
 
                         <p className="text-gray-400 mt-4 leading-7">
-                            Sketch diagrams, architecture,
-                            and ideas beside your code effortlessly.
+                            Automatically save session history. Review past iterations and code discussions anytime.
                         </p>
 
                     </div>

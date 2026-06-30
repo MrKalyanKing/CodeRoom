@@ -21,7 +21,7 @@ export default function Navbar() {
                             href="#"
                             className="text-cyan-400 border-b-2 border-cyan-400 pb-1 font-medium"
                         >
-                            Editor
+                            Home
                         </a>
                     </li>
 
@@ -30,7 +30,7 @@ export default function Navbar() {
                             href="#"
                             className="text-gray-400 hover:text-white transition"
                         >
-                            Rooms
+                            About
                         </a>
                     </li>
 
@@ -39,7 +39,7 @@ export default function Navbar() {
                             href="#"
                             className="text-gray-400 hover:text-white transition"
                         >
-                            History
+                            How It Works
                         </a>
                     </li>
 

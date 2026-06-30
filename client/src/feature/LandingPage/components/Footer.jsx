@@ -1,4 +1,4 @@
-import { Code2 } from "lucide-react";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "../../../components/Icons";
 
 export default function Footer() {
     return (
@@ -62,21 +62,15 @@ export default function Footer() {
                     <div className="flex gap-4">
 
                         <button className="w-11 h-11 rounded-full bg-[#0d1117] border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition">
-
-                            {/* <Github size={18}/> */}
-
+                            <GithubIcon size={18}/>
                         </button>
 
                         <button className="w-11 h-11 rounded-full bg-[#0d1117] border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition">
-
-                            {/* <Linkedin size={18}/> */}
-
+                            <LinkedinIcon size={18}/>
                         </button>
 
                         <button className="w-11 h-11 rounded-full bg-[#0d1117] border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition">
-
-                            {/* <Twitter size={18}/> */}
-
+                            <TwitterIcon size={18}/>
                         </button>
 
                     </div>
