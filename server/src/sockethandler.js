@@ -9,6 +9,7 @@
 import jwt from 'jsonwebtoken';
 import { receiveOp, initRoom, getContent } from './SynEngine.js';
 import Room from './modules/Room/models/Room.js';
+import History from './modules/History/models/History.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'changeme-set-JWT_SECRET-in-env';
 
@@ -30,6 +31,11 @@ function scheduleSave(roomCode) {
                 { content: state.content, version: state.version },
                 { new: true }
             );
+            await History.create({
+                roomCode: roomCode,
+                content: state.content,
+                version: state.version
+            });
         } catch (err) {
             console.error(`Persist error for room ${roomCode}:`, err);
         }

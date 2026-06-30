@@ -201,18 +201,18 @@ export default function EditorRoom({ session, onLeave, onViewHistory }) {
                     <span className="text-[#00dbe9] font-medium border-b-2 border-[#00dbe9] pb-5 -mb-5 cursor-default">
                         Editor
                     </span>
-                    <span className="text-gray-500 cursor-default" title="Coming soon">
+                    {/* <span className="text-gray-500 cursor-default" title="Coming soon">
                         Rooms
-                    </span>
-                    <span 
-                        className="text-gray-500 cursor-pointer hover:text-white transition" 
+                    </span> */}
+                    <span
+                        className="text-gray-500 cursor-pointer hover:text-white transition"
                         onClick={onViewHistory}
                     >
                         History
                     </span>
-                    <span className="text-gray-500 cursor-default" title="Coming soon">
+                    {/* <span className="text-gray-500 cursor-default" title="Coming soon">
                         Settings
-                    </span>
+                    </span> */}
                 </nav>
 
                 <div className="w-9 h-9 rounded-full border border-[#1c232c] flex items-center justify-center text-gray-400 flex-shrink-0">
@@ -332,9 +332,8 @@ export default function EditorRoom({ session, onLeave, onViewHistory }) {
 
                     {/* ── Output panel ─────────────────────────────────────── */}
                     <div
-                        className={`absolute right-4 bottom-4 w-80 bg-[#0a0e14] border border-[#1c232c] rounded-lg shadow-2xl transition-all ${
-                            outputOpen ? 'h-56' : 'h-9'
-                        } overflow-hidden`}
+                        className={`absolute right-4 bottom-4 w-80 bg-[#0a0e14] border border-[#1c232c] rounded-lg shadow-2xl transition-all ${outputOpen ? 'h-56' : 'h-9'
+                            } overflow-hidden`}
                     >
                         <button
                             className="w-full h-9 flex-shrink-0 flex items-center justify-between px-3 bg-[#0c1117] border-b border-[#1c232c]"

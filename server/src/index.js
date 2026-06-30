@@ -5,6 +5,7 @@ import { Server } from 'socket.io';
 import connectDB from './Config/db.js';
 import roomRoutes from './modules/Room/routes/room.routes.js';
 import authRoutes from './modules/Auth/routes/auth.routes.js';
+import historyRoutes from './modules/History/routes/history.routes.js';
 import { registerSocket } from './sockethandler.js';
 
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use('/api/rooms', roomRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/history', historyRoutes);
 
 io.on('connection', (socket) => {
   registerSocket(io, socket);
