@@ -7,7 +7,7 @@ import RoomCard from "./components/RoomCard";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 
-export default function LandingPage({ onEnterRoom }) {
+export default function LandingPage({ onEnterRoom, onViewHistory }) {
     const [tab, setTab] = useState('join'); // 'join' | 'create'
     const [handle, setHandle] = useState('');
     const [roomName, setRoomName] = useState('');
@@ -131,6 +131,7 @@ export default function LandingPage({ onEnterRoom }) {
 
     <Hero>
         <RoomCard
+            onViewHistory={onViewHistory}
             tab={tab}
             switchTab={switchTab}
             handle={handle}

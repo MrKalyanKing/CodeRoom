@@ -20,6 +20,7 @@ export default function RoomCard({
     handleJoinForm,
     error,
     loading,
+    onViewHistory,
 }) {
 
     const inputClass =
@@ -243,8 +244,17 @@ export default function RoomCard({
 
                         <span>E2E Encrypted</span>
 
-                    </div>
+                </div>
 
+                {/* View History Button */}
+                <div className="pt-4 mt-2 border-t border-white/5 text-center">
+                    <button 
+                        type="button"
+                        onClick={onViewHistory}
+                        className="text-cyan-400 hover:text-white transition-colors text-xs uppercase tracking-widest font-semibold"
+                    >
+                        View Code Conversation History
+                    </button>
                 </div>
 
             </form>
