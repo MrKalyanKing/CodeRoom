@@ -245,6 +245,7 @@ export default function RoomCard({
                         <span>E2E Encrypted</span>
 
                 </div>
+                </div>
 
                 {/* View History Button */}
                 <div className="pt-4 mt-2 border-t border-white/5 text-center">
